@@ -24,11 +24,11 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/', [WoordController::class, 'index'])->name('home');
+    Route::get('/words', [WoordController::class, 'index'])->name('home');
     Route::get('/words/create', [WoordController::class, 'create'])->name('words.create');
     Route::post('/words', [WoordController::class, 'store'])->name('words.store');
     Route::get('/words/{id}/edit', [WoordController::class, 'edit'])->name('words.edit');
