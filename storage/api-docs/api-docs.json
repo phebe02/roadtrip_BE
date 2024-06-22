@@ -1,0 +1,209 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Roadtrip Game API",
+        "description": "API-documentatie voor de Roadtrip Game App",
+        "contact": {
+            "email": "support@roadtripgame.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://my-default-host.com",
+            "description": "API Server"
+        }
+    ],
+    "paths": {
+        "/api/themas": {
+            "get": {
+                "summary": "Haal alle themas op",
+                "operationId": "8d28bf948cf3520bd88ecd2a31a6545b",
+                "responses": {
+                    "200": {
+                        "description": "Een lijst van themas",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Thema"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/themas/{id}": {
+            "get": {
+                "summary": "Haal een specifiek thema op",
+                "operationId": "da02721ace6ad13dcc0fb159502ff93f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Een specifiek thema",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Thema"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Thema niet gevonden"
+                    }
+                }
+            }
+        },
+        "/api/woorden": {
+            "get": {
+                "summary": "Haal alle woorden op",
+                "operationId": "05873e629b143d13ac2964cd6721e31f",
+                "responses": {
+                    "200": {
+                        "description": "Een lijst van woorden",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Woord"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/woorden/{id}": {
+            "get": {
+                "summary": "Haal een specifiek woord op",
+                "operationId": "d4a26f1add7f67e70ef1ccbee807df45",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Een specifiek woord",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Woord"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Woord niet gevonden"
+                    }
+                }
+            }
+        },
+        "/api/woorden/thema/{themaId}": {
+            "get": {
+                "summary": "Haal woorden op per thema",
+                "operationId": "c8c523cf508c0d1114e45eaafab8d4ae",
+                "parameters": [
+                    {
+                        "name": "themaId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Een lijst van woorden per thema",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Woord"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Thema niet gevonden"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Thema": {
+                "title": "Thema",
+                "required": [
+                    "id",
+                    "thema"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "thema": {
+                        "type": "string",
+                        "example": "verkeer"
+                    },
+                    "woorden": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Woord"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "Woord": {
+                "title": "Woord",
+                "required": [
+                    "id",
+                    "woord"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "woord": {
+                        "type": "string",
+                        "example": "auto"
+                    },
+                    "themas": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Thema"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}

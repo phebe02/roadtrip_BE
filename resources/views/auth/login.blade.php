@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <img src="{{ asset('images/roadtrip_game_logo.png') }}" class="block h-20 bg-yellow-500 w-auto" alt="Your Logo" />
         </x-slot>
 
         <x-validation-errors class="mb-4" />
