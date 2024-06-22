@@ -5,6 +5,7 @@ use Tests\TestCase;
 use App\Models\Woord;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
+//kan je alle woorden correct ophalen?
 class WoordTest extends TestCase
 {
     use RefreshDatabase;
