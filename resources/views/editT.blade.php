@@ -6,13 +6,13 @@
     </x-slot>
 
     <div class="container mx-auto mt-8">
-        <h3 class="text-center">Thema Bewerken</h3>
+        <h3 class="text-center text-white">Thema Bewerken</h3>
 
         <form action="{{ route('themas.update', $thema->id) }}" method="POST" class="mt-4">
             @csrf
             @method('PUT')
             <div class="mb-4">
-                <label for="thema" class="block text-gray-700">Thema</label>
+                <label for="thema" class="block text-white">Thema</label>
                 <input type="text" name="thema" id="thema" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" value="{{ $thema->thema }}">
             </div>
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Opslaan</button>

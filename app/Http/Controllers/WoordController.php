@@ -49,7 +49,7 @@ class WoordController extends Controller
 
         $woord = Woord::findOrFail($id);
         $woord->update(['woord' => $request->woord]);
-        $woord->themas()->sync($request->themas);
+        $woord->thema()->sync($request->themas);
 
         return redirect()->route('home');
     }

@@ -11,11 +11,11 @@
         <form action="{{ route('words.store') }}" method="POST" class="mt-4">
             @csrf
             <div class="mb-4">
-                <label for="woord" class="block text-gray-700 text-white">Woord</label>
+                <label for="woord" class="block  text-white">Woord</label>
                 <input type="text" name="woord" id="woord" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
             </div>
             <div class="mb-4">
-                <label for="themas" class="block text-gray-700 text-white">Thema's</label>
+                <label for="themas" class="block text-white">Thema's</label>
                 @foreach ($themas as $thema)
                     <div>
                         <input type="checkbox" name="themas[]" value="{{ $thema->id }}" id="thema-{{ $thema->id }}">
