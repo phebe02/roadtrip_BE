@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Woord;
 use Illuminate\Http\Request;
-
 /**
  * @OA\Info(
  *     version="1.0.0",

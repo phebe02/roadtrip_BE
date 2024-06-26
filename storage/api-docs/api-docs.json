@@ -10,7 +10,7 @@
     },
     "servers": [
         {
-            "url": "https://my-default-host.com",
+            "url": "https://roadtripbackend.ddev.site",
             "description": "API Server"
         }
     ],
