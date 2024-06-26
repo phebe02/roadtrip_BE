@@ -10,8 +10,8 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="https://roadtrip-bingo-hklp8.ondigitalocean.app/build/assets/app-CX15eJ11.css">
-        <link rel="" href="https://roadtrip-bingo-hklp8.ondigitalocean.app/build/assets/app-C1-XIpUa.js">
+        <!-- <link rel="stylesheet" href="https://roadtrip-bingo-hklp8.ondigitalocean.app/build/assets/app-CX15eJ11.css">
+        <link rel="" href="https://roadtrip-bingo-hklp8.ondigitalocean.app/build/assets/app-C1-XIpUa.js"> -->
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
