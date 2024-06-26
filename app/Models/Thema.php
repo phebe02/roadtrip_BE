@@ -15,6 +15,6 @@ class Thema extends Model
 
     public function woorden()
     {
-        return $this->belongsToMany(Woord::class, 'themewoord', 'thema_id', 'woord_id');
+        return $this->belongsToMany(Woord::class, 'themas_woorden', 'thema_id', 'woord_id');
     }
 }

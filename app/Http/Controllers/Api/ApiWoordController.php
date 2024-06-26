@@ -101,7 +101,7 @@ class ApiWoordController extends Controller
      */
     public function getWordsByThema($themaId)
     {
-        $woorden = Woord::whereHas('themas', function ($query) use ($themaId) {
+        $woorden = Woord::whereHas('thema', function ($query) use ($themaId) {
             $query->where('thema_id', $themaId);
         })->get(['id', 'woord']);
 
