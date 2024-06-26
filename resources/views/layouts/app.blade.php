@@ -10,7 +10,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="https://roadtrip-bingo-e4xjd.ondigitalocean.app/build/assets/app-CMsC1FZK.css">
+        <link rel="stylesheet" href="https://roadtrip-bingo-hklp8.ondigitalocean.app/build/assets/app-CMsC1FZK.css">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
